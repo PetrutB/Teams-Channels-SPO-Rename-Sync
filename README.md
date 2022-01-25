@@ -15,12 +15,12 @@ In order to do so, we are leveraging the SharePointOnline Management PowerShell 
 First, we are looking at establishing a GraphAPI Session with the relevant Graph Permissions in place:
 ```
 Connect-MgGraph -Scopes "Channel.ReadBasic.All",
-"ChannelSettings.Read.All",
-"ChannelSettings.ReadWrite.All",
-"Group.Read.All",
-"Group.ReadWrite.All",
-"Directory.Read.All", 
-"Directory.ReadWrite.All"
+    "ChannelSettings.Read.All",
+    "ChannelSettings.ReadWrite.All",
+    "Group.Read.All",
+    "Group.ReadWrite.All",
+    "Directory.Read.All", 
+    "Directory.ReadWrite.All"
 ```
 We are then establishing a SPO PowerShell Connection as well:
 ```
