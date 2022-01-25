@@ -25,12 +25,12 @@ foreach ($i in $Teams) {
             $params = @{ DisplayName = "Temporary GraphAPI Rename" }
 
             Write-Host "[ACTION] Channel: $($j.DisplayName) from Team: $($i.Title) mismatched SharePoint Online Folder Name: $($SPOLibraryFolderName)"
-            #Update-MgTeamChannel -TeamId $i.Groupid -ChannelId $j.Id -BodyParameter $params
+            Update-MgTeamChannel -TeamId $i.Groupid -ChannelId $j.Id -BodyParameter $params
             Write-Host "[ACTION] Temporary Rename Succesfull"
 
             $params = @{ DisplayName = $ChannelName }
 
-            #Update-MgTeamChannel -TeamId $i.Groupid -ChannelId $j.Id -BodyParameter $params
+            Update-MgTeamChannel -TeamId $i.Groupid -ChannelId $j.Id -BodyParameter $params
             Write-Host "[ACTION] Rename to: $($ChannelName) for the Channel and Library Successful"
 
         } else {
